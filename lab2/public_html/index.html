@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>Super Fancy Chat Room</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<h1>Super Fancy Chat Room</h1>
+<div class="box screenshot">
+    <img src="screenshot.png" , width=100%></img>
+    If you can see the screenshot, multiple sequential connections are working
+</div>
+<div class="wrapper">
+    <div class="box test">
+        <h2>Test Status</h2>
+        <a class="button" href="/thisisa404.html">404</a>
+        <form action="/thisisa501.html" method="post">
+            <input class="button" type="submit" value="501">
+        </form>
+    </div>
+    <div class="box bonus">
+        <h2>Tools</h2>
+        <a class="button" href="/cgi-bin/test.py">Test</a>
+        <a class="button" href="/dig.html">Dig</a>
+    </div>
+    <div class="box download">
+        <h2>Chat Downloads</h2>
+        <a class="button" href="/client.py">Download client</a>
+        <a class="button" href="/client.py">Download GUI</a>
+    </div>
+</div>
+<footer>
+    You have visited this page <span id="visit_counter">? times</span>!
+</footer>
+</body>
+
+<script>
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    try {
+        var visits = getCookie('page-counter');
+        console.log(visits);
+        console.log(document.getElementById("visit_counter"));
+        var ts = " time";
+        if(visits > 1) {
+            ts = " times";
+        }
+        document.getElementById("visit_counter").innerHTML = visits + ts;
+    }
+    catch (err) {
+        console.log(err)
+    }
+</script>
+
+</html>

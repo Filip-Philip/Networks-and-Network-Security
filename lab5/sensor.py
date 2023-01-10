@@ -3,7 +3,7 @@ Networks and Network Security
 Lab 5 - Distributed Sensor Network
 
 NAME(s): Filip Skalka, Mark Jansen
-STUDENT ID(s): 14635011,
+STUDENT ID(s): 14635011, 13385569
 GROUP NAME:
 
 DESCRIPTION: Definitions and message format
@@ -17,12 +17,18 @@ MSG_PONG = 1  # Unicast pong.
 MSG_ECHO = 2  # Unicast echo.
 MSG_ECHO_REPLY = 3  # Unicast echo reply.
 # TODO: You may define your own message types if needed.
+# MSG_PATH_NODE = 4
+# MSG_PATH_NODE_RECEIVED = 5
 
 # These are the echo operations.
 OP_NOOP = 0  # Do nothing.
 OP_SIZE = 1  # Compute the size of network.
 OP_UPDATE = 2  # Force update the network.
 OP_DEGREE = 3 # Find the largest degree
+OP_PATH = 4
+OP_DONE_SENDING = 5
+OP_PATH_STRENGTH = 6
+OP_DONE_SENDING_STRENGTH = 7
 # TODO: You may define your own echo operations if needed.
 
 # This is used to pack message fields into a binary format.

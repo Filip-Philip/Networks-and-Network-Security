@@ -1,0 +1,4 @@
+Not enough data has been sampled to be able to conclude with sufficient certainty how the increase of 
+the number of nodes influences the highest degree of the network. The average seems to be going up as we 
+increase the number of nodes in the network which would match our expectations. We could not come to
+any concrete conclusions regarding explaining the trends in the value of standard deviation.

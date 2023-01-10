@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Dig</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            function submitForm() {
+                var arg = document.getElementById("arg");
+                var mode = $('input[name="mode"]:checked').val();
+                window.location = "/cgi-bin/dig.py" + "?" + arg.value + "&" + mode;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Dig</h1>
+        <form id="digform" action="javascript:submitForm()" name="dig">
+            <input type="text" id="arg" name="ip" placeholder="example.com"><br>
+            Choose mode: <br>
+            <input type="radio" id="hostname" name="mode" value="hostname" checked>
+            <label for="hostname">Hostname</label>
+            <input type="radio" id="ip" name="mode" value="ip">
+            <label for="ip">ip address</label><br>
+            <input type="submit" value="Dig">
+        </form>
+    </body>
+</html>
